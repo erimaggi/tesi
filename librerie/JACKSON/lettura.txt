@@ -1,0 +1,4 @@
+		ObjectMapper mapper = new ObjectMapper();
+		ArrayNode a = (ArrayNode) mapper.readTree(new File(
+				"percorso file"));
+

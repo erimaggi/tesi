@@ -1,0 +1,18 @@
+{
+  "firstTree": "tree1",
+  "secondTree": "tree2",
+  "mapping":  [
+      {
+          "varFirstTree": "1.85",
+          "varSecondTree": "init_2_tors_other"
+      },
+      {
+          "varFirstTreeMonths": "2",
+          "varSecondTreeMonths": "init_2_tors_months"
+      },
+      {
+          "varFirstTreeCosts": "40203.16",
+          "varSecondTreeCosts": "init_2_tors_other_costs"
+      }
+    ]
+}
