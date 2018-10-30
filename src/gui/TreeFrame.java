@@ -110,9 +110,14 @@ public class TreeFrame extends JFrame  implements ActionListener{
         try {
             LoaderDB ldb = new LoaderDB();
             System.out.println(comboTree.getSelectedItem().toString());
-            //ResultSet rs = ldb.getRS("SELECT * FROM uceweb_aime2017.jsonFiles WHERE albero_partenza="+comboTree.getSelectedItem().toString());
-            //jsonName = rs.getString("albero_partenza");
-            jsonName = comboTree.getSelectedItem().toString();
+            String query = "SELECT * FROM uceweb_aime2017.jsonFiles WHERE albero_partenza= '"+comboTree.getSelectedItem().toString()+"'";
+            ResultSet rs = ldb.getRS(query);
+            while(rs.next()){
+                if(!rs.getString("nome_file").equals(null)){
+                   jsonName = rs.getString("nome_file");
+                }
+            }
+            //jsonName = comboTree.getSelectedItem().toString();
         } catch (SQLException ex) {
             System.out.println("SQLException");
         }
