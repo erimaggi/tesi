@@ -30,10 +30,10 @@ public class TreeFrame extends JFrame  implements ActionListener{
     
     public static final int WIDTH = 600; 
     public static final int HEIGHT= 600;
-    JPanel panel1, panel2, panel3, panel4, panel5, panel6, panel7;
-    JLabel label1, label2, label3, label4, labelTLM, labelTORS;
+    JPanel panel1, panel2, panel3, panel4, panel5, panel6, panel7, panel8, panel9, panel10;
+    JLabel label1, label2, label3, label4, labelTLM, labelTORS, labelEmpty, label5, label5TORS, label5TLM, label6, label6TORS, label6TLM, label7, label7TORS, label7TLM, label10, label10ind, labelEmpty2, labelEmpty3, labelEmpty4;
     JComboBox comboTree;
-    JButton load, rollback;
+    JButton load, rollback, indici;
     
     public TreeFrame(){
         setSize(WIDTH, HEIGHT);
@@ -69,19 +69,98 @@ public class TreeFrame extends JFrame  implements ActionListener{
         
         panel4 = new JPanel();
         label4 = new JLabel("Risultati");
+        //label4.setHorizontalAlignment(JLabel.CENTER);
         label4.setFont(new Font(label4.getFont().getFontName(), Font.BOLD, label4.getFont().getSize()));
         label4.setForeground(Color.red);
         labelTLM = new JLabel("TLM");
+        labelTLM.setHorizontalAlignment(JLabel.CENTER);
         labelTORS = new JLabel("TORS");
+        labelTORS.setHorizontalAlignment(JLabel.CENTER);
+        labelEmpty = new JLabel();
         
         setPanel(this, panel4, 1, 1, 1, 10);
         panel4.add(label4);
+        panel4.add(labelEmpty);
         panel4.add(labelTLM);
         panel4.add(labelTORS);
-        label4.setPreferredSize(new Dimension(panel4.getWidth() * 15 / 30, panel4.getHeight()));
-        labelTLM.setPreferredSize(new Dimension(panel4.getWidth() * 7 / 30, panel4.getHeight()));
-        labelTORS.setPreferredSize(new Dimension(panel4.getWidth() * 7 / 30, panel4.getHeight())); 
+        label4.setPreferredSize(new Dimension(panel4.getWidth() * 10 / 40, panel4.getHeight()));
+        labelEmpty.setPreferredSize(new Dimension(panel4.getWidth() * 5 / 40, panel4.getHeight()));
+        labelTLM.setPreferredSize(new Dimension(panel4.getWidth() * 10 / 40, panel4.getHeight()));
+        labelTORS.setPreferredSize(new Dimension(panel4.getWidth() * 10 / 40, panel4.getHeight())); 
         
+        
+        panel5 = new JPanel();
+        label5 = new JLabel("QALMS");
+        label5TLM = new JLabel("-");
+        label5TLM.setHorizontalAlignment(JLabel.CENTER);
+        label5TORS = new JLabel("-");
+        label5TORS.setHorizontalAlignment(JLabel.CENTER);
+        labelEmpty2 = new JLabel();
+        
+        setPanel(this, panel5, 1, 1, 1, 10);
+        panel5.add(label5);
+        panel5.add(labelEmpty2);
+        panel5.add(label5TLM);
+        panel5.add(label5TORS);
+        label5.setPreferredSize(new Dimension(panel5.getWidth() * 10 / 40, panel5.getHeight()));
+        labelEmpty2.setPreferredSize(new Dimension(panel5.getWidth() * 5 / 40, panel5.getHeight()));
+        label5TLM.setPreferredSize(new Dimension(panel5.getWidth() * 10 / 40, panel5.getHeight()));
+        label5TORS.setPreferredSize(new Dimension(panel5.getWidth() * 10 / 40, panel5.getHeight()));
+        
+        panel6 = new JPanel();
+        label6 = new JLabel("YEARS");
+        label6TLM = new JLabel("-");
+        label6TLM.setHorizontalAlignment(JLabel.CENTER);
+        label6TORS = new JLabel("-");
+        label6TORS.setHorizontalAlignment(JLabel.CENTER);
+        labelEmpty3 = new JLabel();
+        
+        setPanel(this, panel6, 1, 1, 1, 10);
+        panel6.add(label6);
+        panel6.add(labelEmpty3);
+        panel6.add(label6TLM);
+        panel6.add(label6TORS);
+        label6.setPreferredSize(new Dimension(panel6.getWidth() * 10 / 40, panel6.getHeight()));
+        labelEmpty3.setPreferredSize(new Dimension(panel6.getWidth() * 5 / 40, panel6.getHeight()));
+        label6TLM.setPreferredSize(new Dimension(panel6.getWidth() * 10 / 40, panel6.getHeight()));
+        label6TORS.setPreferredSize(new Dimension(panel6.getWidth() * 10 / 40, panel6.getHeight()));
+        
+        panel7 = new JPanel();
+        label7 = new JLabel("COSTS");
+        label7TLM = new JLabel("-");
+        label7TLM.setHorizontalAlignment(JLabel.CENTER);
+        label7TORS = new JLabel("-");
+        label7TORS.setHorizontalAlignment(JLabel.CENTER);
+        labelEmpty4 = new JLabel();
+        
+        setPanel(this, panel7, 1, 1, 1, 10);
+        panel7.add(label7);
+        panel7.add(labelEmpty4);
+        panel7.add(label7TLM);
+        panel7.add(label7TORS);
+        label7.setPreferredSize(new Dimension(panel7.getWidth() * 10 / 40, panel7.getHeight()));
+        labelEmpty4.setPreferredSize(new Dimension(panel7.getWidth() * 5 / 40, panel7.getHeight()));
+        label7TLM.setPreferredSize(new Dimension(panel7.getWidth() * 10 / 40, panel7.getHeight()));
+        label7TORS.setPreferredSize(new Dimension(panel7.getWidth() * 10 / 40, panel7.getHeight()));
+        
+        panel8 = new JPanel();
+        setPanel(this, panel8, 1, 1, 1, 10);
+        
+        panel9 = new JPanel();
+        indici = new JButton("Calcola indici");
+        setPanel(this, panel9, 1, 1, 1, 10);
+        panel9.add(indici);
+        indici.addActionListener(this);
+        
+        panel10 = new JPanel();
+        label10 = new JLabel("ICER/ICUR");
+        label10ind = new JLabel("-");
+        
+        setPanel(this, panel10, 1, 1, 1, 10);
+        panel10.add(label10);
+        panel10.add(label10ind);
+        label10.setPreferredSize(new Dimension(panel10.getWidth() * 12 / 20, panel10.getHeight()));
+        label10ind.setPreferredSize(new Dimension(panel10.getWidth() * 7 / 20, panel10.getHeight()));
     
     }
 
