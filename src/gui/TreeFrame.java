@@ -30,8 +30,8 @@ public class TreeFrame extends JFrame  implements ActionListener{
     
     public static final int WIDTH = 600; 
     public static final int HEIGHT= 600;
-    JPanel panel1, panel2, panel3;
-    JLabel label1, label2, label3;
+    JPanel panel1, panel2, panel3, panel4, panel5, panel6, panel7;
+    JLabel label1, label2, label3, label4, labelTLM, labelTORS;
     JComboBox comboTree;
     JButton load, rollback;
     
@@ -66,6 +66,21 @@ public class TreeFrame extends JFrame  implements ActionListener{
         setPanel(this, panel3, 1, 1, 1, 10);
         panel3.add(rollback);
         rollback.addActionListener(this);
+        
+        panel4 = new JPanel();
+        label4 = new JLabel("Risultati");
+        label4.setFont(new Font(label4.getFont().getFontName(), Font.BOLD, label4.getFont().getSize()));
+        label4.setForeground(Color.red);
+        labelTLM = new JLabel("TLM");
+        labelTORS = new JLabel("TORS");
+        
+        setPanel(this, panel4, 1, 1, 1, 10);
+        panel4.add(label4);
+        panel4.add(labelTLM);
+        panel4.add(labelTORS);
+        label4.setPreferredSize(new Dimension(panel4.getWidth() * 15 / 30, panel4.getHeight()));
+        labelTLM.setPreferredSize(new Dimension(panel4.getWidth() * 7 / 30, panel4.getHeight()));
+        labelTORS.setPreferredSize(new Dimension(panel4.getWidth() * 7 / 30, panel4.getHeight())); 
         
     
     }
