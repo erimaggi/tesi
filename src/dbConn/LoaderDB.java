@@ -21,7 +21,7 @@ public class LoaderDB {
     
     String driverName = "com.mysql.jdbc.Driver";
     String databaseURL = "jdbc:mysql://localhost:3306/uceweb_aime2017?";
-    String credenziali = "user=root&password=root";
+    String credenziali = "user=root&password=";
     static private Connection connection;
     static private Statement statement;
 

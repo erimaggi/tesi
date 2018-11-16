@@ -3,8 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/erikamaggi/Desktop/unipv/Tesi/materialeJava/JavaApplicationTree/src/gui/TreeFrame.java</file>
-            <file>file:/Users/erikamaggi/Desktop/unipv/Tesi/materialeJava/JavaApplicationTree/src/javaapplicationtree/JavaApplicationTree.java</file>
+            <file>file:/home/quaglini/Desktop/java/JavaApplicationTree/src/gui/CalculationFrame.java</file>
+            <file>file:/home/quaglini/Desktop/java/JavaApplicationTree/src/javaapplicationtree/UseObjectInterface.java</file>
+            <file>file:/home/quaglini/Desktop/java/JavaApplicationTree/src/jsonReader/JsonReader.java</file>
+            <file>file:/home/quaglini/Desktop/java/JavaApplicationTree/src/gui/Mapping.java</file>
+            <file>file:/home/quaglini/Desktop/java/JavaApplicationTree/src/dbConn/LoaderDB.java</file>
+            <file>file:/home/quaglini/Desktop/java/JavaApplicationTree/src/gui/TreeFrame.java</file>
+            <file>file:/home/quaglini/Desktop/java/JavaApplicationTree/src/javaapplicationtree/JavaApplicationTree.java</file>
         </group>
     </open-files>
 </project-private>

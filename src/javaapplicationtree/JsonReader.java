@@ -39,8 +39,9 @@ public class JsonReader {
     
     public void printElement(String element){
         //JsonNode elNode = rootNode.path(element);
-        System.out.println("Element: "+ rootNode.get(element).asText());
         System.out.println(rootNode.toString());
+        System.out.println("Element: "+ rootNode.get(element).asText());
+        
     }
     
     

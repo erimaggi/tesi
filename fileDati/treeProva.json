@@ -1,0 +1,30 @@
+{"treeInitial": {
+  "firstTree": "provaSenzaData.trex",
+  "secondTree": "tree2.trex",
+  "mapping":  [
+      {
+          "node1": "Node1",
+          "varSecondTree1": ""
+	  
+	  "node2": "Node2",
+          "varSecondTree2": ""
+
+	  "node3": "Node3",
+          "varSecondTree3": ""
+	
+	  "node4": "Node4",
+          "varSecondTree4": ""
+
+	  "node5": "Node5",
+          "varSecondTree5": ""
+
+	  "node34": "Node34",
+          "varSecondTree34": ""
+
+	  "node36": "Node36",
+          "varSecondTree36": ""
+	
+      }
+    ]
+  }
+}

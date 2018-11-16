@@ -1,0 +1,862 @@
+{ 
+"firstTree":"TORSvsTLMComplication.trex",
+         "secondTree":"TORSvsTLMRemission.trex",
+            "payoff2":[
+               {
+                  "node":"Node17",
+                  "varSecondTree": "init_2_tors_other"
+               },
+               {
+                  "node":"Node16",
+                  "varSecondTree": "init_2_tors_lg"
+               },
+		 {
+                  "node":"Node18",
+                  "varSecondTree": "init_2_tors_lt"
+               },
+		 {
+                  "node":"Node19",
+                  "varSecondTree": "init_2_tors_sg"
+               },
+		 {
+                  "node":"Node14",
+                  "varSecondTree": "init_1_tors"
+               },
+		 {
+                  "node":"Node26",
+                  "varSecondTree": "init_2_tors_hosp_other"
+               },
+		 {
+                  "node":"Node31",
+                  "varSecondTree": "init_2_tors_hosp_lg"
+               },
+		 {
+                  "node":"Node32",
+                  "varSecondTree": "init_2_tors_hosp_lt"
+               },
+		 {
+                  "node":"Node33",
+                  "varSecondTree": "init_2_tors_hosp_sg"
+               },
+		 {
+                  "node":"Node24",
+                  "varSecondTree": "init_1_tors_hosp"
+               },
+		 {
+                  "node":"Node36",
+                  "varSecondTree": "init_2_tors_fist_other"
+               },
+		 {
+                  "node":"Node41",
+                  "varSecondTree": "init_2_tors_fist_lg"
+               },
+		 {
+                  "node":"Node42",
+                  "varSecondTree": "init_2_tors_fist_lt"
+               },
+		 {
+                  "node":"Node43",
+                  "varSecondTree": "init_2_tors_fist_sg"
+               },
+		 {
+                  "node":"Node34",
+                  "varSecondTree": "init_1_tors_fist"
+               },
+		 {
+                  "node":"Node46",
+                  "varSecondTree": "init_2_tors_hem_other"
+               },
+		 {
+                  "node":"Node51",
+                  "varSecondTree": "init_2_tors_hem_lg"
+               },
+		 {
+                  "node":"Node52",
+                  "varSecondTree": "init_2_tors_hem_lt"
+               },
+		 {
+                  "node":"Node53",
+                  "varSecondTree": "init_2_tors_hem_sg"
+               },
+		 {
+                  "node":"Node44",
+                  "varSecondTree": "init_1_tors_hem"
+               },
+		 {
+                  "node":"Node56",
+                  "varSecondTree": "init_2_tors_lg_other"
+               },
+		 {
+                  "node":"Node62",
+                  "varSecondTree": "init_2_tors_lg_lt"
+               },
+		 {
+                  "node":"Node54",
+                  "varSecondTree": "init_1_tors_lg"
+               },
+		 {
+                  "node":"Node74",
+                  "varSecondTree": "init_2_tors_lt_other"
+               },
+		 {
+                  "node":"Node79",
+                  "varSecondTree": "init_2_tors_lt_lg"
+               },
+		 {
+                  "node":"Node80",
+                  "varSecondTree": "init_2_tors_lt_sg"
+               },
+		 {
+                  "node":"Node72",
+                  "varSecondTree": "init_1_tors_lt"
+               },
+		 {
+                  "node":"Node66",
+                  "varSecondTree": "init_2_tors_sg_other"
+               },
+		 {
+                  "node":"Node71",
+                  "varSecondTree": "init_2_tors_sg_lt"
+               },
+		 {
+                  "node":"Node64",
+                  "varSecondTree": "init_1_tors_sg"
+               },
+		 {
+                  "node":"Node93",
+                  "varSecondTree": "init_2_tors_adj_other"
+               },
+		 {
+                  "node":"Node98",
+                  "varSecondTree": "init_2_tors_adj_lg"
+               },
+		 {
+                  "node":"Node99",
+                  "varSecondTree": "init_2_tors_adj_lt"
+               },
+		 {
+                  "node":"Node100",
+                  "varSecondTree": "init_2_tors_adj_sg"
+               },
+		 {
+                  "node":"Node101",
+                  "varSecondTree": "init_tors_adj_rem"
+               },
+		 {
+                  "node":"Node104",
+                  "varSecondTree": "init_2_tors_adj_hosp_other"
+               },
+		 {
+                  "node":"Node109",
+                  "varSecondTree": "init_2_tors_adj_hosp_lg"
+               },
+		 {
+                  "node":"Node110",
+                  "varSecondTree": "init_2_tors_adj_hosp_lt"
+               },
+		 {
+                  "node":"Node111",
+                  "varSecondTree": "init_2_tors_adj_hosp_sg"
+               },
+		 {
+                  "node":"Node112",
+                  "varSecondTree": "init_tors_adj_hosp"
+               },
+		 {
+                  "node":"Node178",
+                  "varSecondTree": "init_2_tors_adj_fist_other"
+               },
+		 {
+                  "node":"Node183",
+                  "varSecondTree": "init_2_tors_adj_fist_lg"
+               },
+		 {
+                  "node":"Node184",
+                  "varSecondTree": "init_2_tors_adj_fist_lt"
+               },
+		 {
+                  "node":"Node185",
+                  "varSecondTree": "init_2_tors_adj_fist_sg"
+               },
+		 {
+                  "node":"Node176",
+                  "varSecondTree": "init_tors_adj_fist"
+               },
+		 {
+                  "node":"Node188",
+                  "varSecondTree": "init_2_tors_adj_hem_other"
+               },
+		 {
+                  "node":"Node193",
+                  "varSecondTree": "init_2_tors_adj_hem_lg"
+               },
+		 {
+                  "node":"Node194",
+                  "varSecondTree": "init_2_tors_adj_hem_lt"
+               },
+		 {
+                  "node":"Node195",
+                  "varSecondTree": "init_2_tors_adj_hem_sg"
+               },
+		 {
+                  "node":"Node186",
+                  "varSecondTree": "init_tors_adj_hem"
+               },
+		 {
+                  "node":"Node198",
+                  "varSecondTree": "init_2_tors_adj_orn_other"
+               },
+		 {
+                  "node":"Node203",
+                  "varSecondTree": "init_2_tors_adj_orn_lg"
+               },
+		 {
+                  "node":"Node204",
+                  "varSecondTree": "init_2_tors_adj_orn_lt"
+               },
+		 {
+                  "node":"Node205",
+                  "varSecondTree": "init_2_tors_adj_orn_sg"
+               },
+		 {
+                  "node":"Node196",
+                  "varSecondTree": "init_tors_adj_orn"
+               },
+		 {
+                  "node":"Node83",
+                  "varSecondTree": "init_2_tors_adj_lg_other"
+               },
+		 {
+                  "node":"Node88",
+                  "varSecondTree": "init_2_tors_adj_lg_lt"
+               },
+		 {
+                  "node":"Node89",
+                  "varSecondTree": "init_1_tors_adj_lg"
+               },
+		 {
+                  "node":"Node148",
+                  "varSecondTree": "init_2_tors_adj_lt_other"
+               },
+		 {
+                  "node":"Node153",
+                  "varSecondTree": "init_2_tors_adj_lt_lg"
+               },
+		 {
+                  "node":"Node154",
+                  "varSecondTree": "init_2_tors_adj_lt_sg"
+               },
+		 {
+                  "node":"Node155",
+                  "varSecondTree": "init_1_tors_adj_lt"
+               },
+		 {
+                  "node":"Node208",
+                  "varSecondTree": "init_2_tors_adj_sg_other"
+               },
+		 {
+                  "node":"Node213",
+                  "varSecondTree": "init_2_tors_adj_sg_lt"
+               },
+		 {
+                  "node":"Node206",
+                  "varSecondTree": "init_1_tors_adj_sg"
+               },
+		 {
+                  "node":"Node167",
+                  "varSecondTree": "init_2_tors_adj_es_other"
+               },
+		 {
+                  "node":"Node172",
+                  "varSecondTree": "init_2_tors_adj_es_lg"
+               },
+		 {
+                  "node":"Node173",
+                  "varSecondTree": "init_2_tors_adj_es_lt"
+               },
+		 {
+                  "node":"Node174",
+                  "varSecondTree": "init_2_tors_adj_es_sg"
+               },
+		 {
+                  "node":"Node175",
+                  "varSecondTree": "init_1_tors_adj_es"
+               }
+
+            ],
+            "payoff1":[
+	       {
+                  "node":"Node17",
+                  "varSecondTree": "init_2_tors_months"
+               },
+               {
+                  "node":"Node16",
+                  "varSecondTree": "init_2_tors_months"
+               },
+		 {
+                  "node":"Node18",
+                  "varSecondTree": "init_2_tors_months"
+               },
+		 {
+                  "node":"Node19",
+                  "varSecondTree": "init_2_tors_months"
+               },
+               {
+                  "node":"Node14",
+                  "varSecondTree": "init_only_tors_months"
+               },
+		 {
+                  "node":"Node26",
+                  "varSecondTree": "init_2_tors_months"
+               },
+		 {
+                  "node":"Node31",
+                  "varSecondTree": "init_2_tors_months"
+               },
+		 {
+                  "node":"Node32",
+                  "varSecondTree": "init_2_tors_months"
+               },
+		 {
+                  "node":"Node33",
+                  "varSecondTree": "init_2_tors_months"
+               },
+		 {
+                  "node":"Node24",
+                  "varSecondTree": "init_only_tors_months"
+               },
+		 {
+                  "node":"Node36",
+                  "varSecondTree": "init_2_tors_months"
+               },
+		 {
+                  "node":"Node41",
+                  "varSecondTree": "init_2_tors_months"
+               },
+		 {
+                  "node":"Node42",
+                  "varSecondTree": "init_2_tors_months"
+               },
+		 {
+                  "node":"Node43",
+                  "varSecondTree": "init_2_tors_months"
+               },
+		 {
+                  "node":"Node34",
+                  "varSecondTree": "init_only_tors_months"
+               },
+		 {
+                  "node":"Node46",
+                  "varSecondTree": "init_2_tors_months"
+               },
+		 {
+                  "node":"Node51",
+                  "varSecondTree": "init_2_tors_months"
+               },
+		 {
+                  "node":"Node52",
+                  "varSecondTree": "init_2_tors_months"
+               },
+		 {
+                  "node":"Node53",
+                  "varSecondTree": "init_2_tors_months"
+               },
+		 {
+                  "node":"Node44",
+                  "varSecondTree": "init_only_tors_months"
+               },
+		 {
+                  "node":"Node56",
+                  "varSecondTree": "init_2_tors_months"
+               },
+		 {
+                  "node":"Node62",
+                  "varSecondTree": "init_2_tors_months"
+               },
+		 {
+                  "node":"Node54",
+                  "varSecondTree": "init_only_tors_months"
+               },
+		 {
+                  "node":"Node74",
+                  "varSecondTree": "init_2_tors_months"
+               },
+		 {
+                  "node":"Node79",
+                  "varSecondTree": "init_2_tors_months"
+               },
+		 {
+                  "node":"Node80",
+                  "varSecondTree": "init_2_tors_months"
+               },
+		 {
+                  "node":"Node72",
+                  "varSecondTree": "init_only_tors_months"
+               },
+		 {
+                  "node":"Node66",
+                  "varSecondTree": "init_2_tors_months"
+               },
+		 {
+                  "node":"Node71",
+                  "varSecondTree": "init_2_tors_months"
+               },
+		 {
+                  "node":"Node64",
+                  "varSecondTree": "init_only_tors_months"
+               },
+		 {
+                  "node":"Node93",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node98",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node99",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node100",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node101",
+                  "varSecondTree": "init_tors_adj_months"
+               },
+		 {
+                  "node":"Node104",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node109",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node110",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node111",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node112",
+                  "varSecondTree": "init_tors_adj_months"
+               },
+		 {
+                  "node":"Node178",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node183",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node184",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node185",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node176",
+                  "varSecondTree": "init_tors_adj_months"
+               },
+		 {
+                  "node":"Node188",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node193",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node194",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node195",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node186",
+                  "varSecondTree": "init_tors_adj_months"
+               },
+		 {
+                  "node":"Node198",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node203",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node204",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node205",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node196",
+                  "varSecondTree": "init_tors_adj_months"
+               },
+		 {
+                  "node":"Node83",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node88",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node89",
+                  "varSecondTree": "init_tors_adj_months"
+               },
+		 {
+                  "node":"Node148",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node153",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node154",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node155",
+                  "varSecondTree": "init_tors_adj_months"
+               },
+		 {
+                  "node":"Node208",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node213",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node206",
+                  "varSecondTree": "init_tors_adj_months"
+               },
+		 {
+                  "node":"Node167",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node172",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node173",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node174",
+                  "varSecondTree": "init_2_tors_adj_months"
+               },
+		 {
+                  "node":"Node175",
+                  "varSecondTree": "init_tors_adj_months"
+               }
+               
+
+		 
+               
+    	],
+
+		"payoff3":[
+	       {
+                  "node":"Node17",
+                  "varSecondTree": "init_2_tors_other_costs"
+               },
+               {
+                  "node":"Node16",
+                  "varSecondTree": "init_2_tors_lg_costs"
+               },
+		 {
+                  "node":"Node18",
+                  "varSecondTree": "init_2_tors_lt_costs"
+               },
+		 {
+                  "node":"Node19",
+                  "varSecondTree": "init_2_tors_sg_costs"
+               },
+		 {
+                  "node":"Node14",
+                  "varSecondTree": "init_1_tors_costs"
+               },
+		 {
+                  "node":"Node26",
+                  "varSecondTree": "init_2_tors_hosp_other_costs"
+               },
+		 {
+                  "node":"Node31",
+                  "varSecondTree": "init_2_tors_hosp_lg_costs"
+               },
+		 {
+                  "node":"Node32",
+                  "varSecondTree": "init_2_tors_hosp_lt_costs"
+               },
+		 {
+                  "node":"Node33",
+                  "varSecondTree": "init_2_tors_hosp_sg_costs"
+               },
+
+		 {
+                  "node":"Node24",
+                  "varSecondTree": "init_1_tors_hosp_costs"
+               },
+		{
+                  "node":"Node36",
+                  "varSecondTree": "init_2_tors_fist_other_costs"
+               },
+		 {
+                  "node":"Node41",
+                  "varSecondTree": "init_2_tors_fist_lg_costs"
+               },
+		 {
+                  "node":"Node42",
+                  "varSecondTree": "init_2_tors_fist_lt_costs"
+               },
+		 {
+                  "node":"Node43",
+                  "varSecondTree": "init_2_tors_fist_sg_costs"
+               },
+		 {
+                  "node":"Node34",
+                  "varSecondTree": "init_1_tors_fist_costs"
+               },
+		{
+                  "node":"Node46",
+                  "varSecondTree": "init_2_tors_hem_other_costs"
+               },
+		 {
+                  "node":"Node51",
+                  "varSecondTree": "init_2_tors_hem_lg_costs"
+               },
+		 {
+                  "node":"Node52",
+                  "varSecondTree": "init_2_tors_hem_lt_costs"
+               },
+		 {
+                  "node":"Node53",
+                  "varSecondTree": "init_2_tors_hem_sg_costs"
+               },
+		 {
+                  "node":"Node44",
+                  "varSecondTree": "init_1_tors_hem_costs"
+               },
+		 {
+                  "node":"Node56",
+                  "varSecondTree": "init_2_tors_lg_other_costs"
+               },
+		 {
+                  "node":"Node62",
+                  "varSecondTree": "init_2_tors_lg_lt_costs"
+               },
+		 {
+                  "node":"Node54",
+                  "varSecondTree": "init_1_tors_lg_costs"
+               },
+		 {
+                  "node":"Node74",
+                  "varSecondTree": "init_2_tors_lt_other_costs"
+               },
+		 {
+                  "node":"Node79",
+                  "varSecondTree": "init_2_tors_lt_lg_costs"
+               },
+		 {
+                  "node":"Node80",
+                  "varSecondTree": "init_2_tors_lt_sg_costs"
+               },
+		 {
+                  "node":"Node72",
+                  "varSecondTree": "init_1_tors_lt_costs"
+               },
+		 {
+                  "node":"Node66",
+                  "varSecondTree": "init_2_tors_sg_other_costs"
+               },
+		 {
+                  "node":"Node71",
+                  "varSecondTree": "init_2_tors_sg_lt_costs"
+               },
+		 {
+                  "node":"Node64",
+                  "varSecondTree": "init_1_tors_sg_costs"
+               },
+		 {
+                  "node":"Node93",
+                  "varSecondTree": "init_2_tors_adj_other_costs"
+               },
+		 {
+                  "node":"Node98",
+                  "varSecondTree": "init_2_tors_adj_lg_costs"
+               },
+		 {
+                  "node":"Node99",
+                  "varSecondTree": "init_2_tors_adj_lt_costs"
+               },
+		 {
+                  "node":"Node100",
+                  "varSecondTree": "init_2_tors_adj_sg_costs"
+               },
+		 {
+                  "node":"Node101",
+                  "varSecondTree": "init_tors_adj_rem_costs"
+               },
+		 {
+                  "node":"Node104",
+                  "varSecondTree": "init_2_tors_adj_hosp_other_costs"
+               },
+		 {
+                  "node":"Node109",
+                  "varSecondTree": "init_2_tors_adj_hosp_lg_costs"
+               },
+		 {
+                  "node":"Node110",
+                  "varSecondTree": "init_2_tors_adj_hosp_lt_costs"
+               },
+		 {
+                  "node":"Node111",
+                  "varSecondTree": "init_2_tors_adj_hosp_sg_costs"
+               },
+		 {
+                  "node":"Node112",
+                  "varSecondTree": "init_tors_adj_hosp_costs"
+               },
+		 {
+                  "node":"Node178",
+                  "varSecondTree": "init_2_tors_adj_fist_other_costs"
+               },
+		 {
+                  "node":"Node183",
+                  "varSecondTree": "init_2_tors_adj_fist_lg_costs"
+               },
+		 {
+                  "node":"Node184",
+                  "varSecondTree": "init_2_tors_adj_fist_lt_costs"
+               },
+		 {
+                  "node":"Node185",
+                  "varSecondTree": "init_2_tors_adj_fist_sg_costs"
+               },
+		 {
+                  "node":"Node176",
+                  "varSecondTree": "init_tors_adj_fist_costs"
+               },
+		 {
+                  "node":"Node188",
+                  "varSecondTree": "init_2_tors_adj_hem_other_costs"
+               },
+		 {
+                  "node":"Node193",
+                  "varSecondTree": "init_2_tors_adj_hem_lg_costs"
+               },
+		 {
+                  "node":"Node194",
+                  "varSecondTree": "init_2_tors_adj_hem_lt_costs"
+               },
+		 {
+                  "node":"Node195",
+                  "varSecondTree": "init_2_tors_adj_hem_sg_costs"
+               },
+		 {
+                  "node":"Node186",
+                  "varSecondTree": "init_tors_adj_hem_costs"
+               },
+		 {
+                  "node":"Node198",
+                  "varSecondTree": "init_2_tors_adj_orn_other_costs"
+               },
+		 {
+                  "node":"Node203",
+                  "varSecondTree": "init_2_tors_adj_orn_lg_costs"
+               },
+		 {
+                  "node":"Node204",
+                  "varSecondTree": "init_2_tors_adj_orn_lt_costs"
+               },
+		 {
+                  "node":"Node205",
+                  "varSecondTree": "init_2_tors_adj_orn_sg_costs"
+               },
+		 {
+                  "node":"Node196",
+                  "varSecondTree": "init_tors_adj_orn_costs"
+               },
+		 {
+                  "node":"Node83",
+                  "varSecondTree": "init_2_tors_adj_lg_other_costs"
+               },
+		 {
+                  "node":"Node88",
+                  "varSecondTree": "init_2_tors_adj_lg_lt_costs"
+               },
+		 {
+                  "node":"Node89",
+                  "varSecondTree": "init_1_tors_adj_lg_costs"
+               },
+		 {
+                  "node":"Node148",
+                  "varSecondTree": "init_2_tors_adj_lt_other_costs"
+               },
+		 {
+                  "node":"Node153",
+                  "varSecondTree": "init_2_tors_adj_lt_lg_costs"
+               },
+		 {
+                  "node":"Node154",
+                  "varSecondTree": "init_2_tors_adj_lt_sg_costs"
+               },
+		 {
+                  "node":"Node155",
+                  "varSecondTree": "init_1_tors_adj_lt_costs"
+               },
+		 {
+                  "node":"Node208",
+                  "varSecondTree": "init_2_tors_adj_sg_other_costs"
+               },
+		 {
+                  "node":"Node213",
+                  "varSecondTree": "init_2_tors_adj_sg_lt_costs"
+               },
+		 {
+                  "node":"Node206",
+                  "varSecondTree": "init_1_tors_adj_sg_costs"
+               },
+		 {
+                  "node":"Node167",
+                  "varSecondTree": "init_2_tors_adj_es_other_costs"
+               },
+		 {
+                  "node":"Node172",
+                  "varSecondTree": "init_2_tors_adj_es_lg_costs"
+               },
+		 {
+                  "node":"Node173",
+                  "varSecondTree": "init_2_tors_adj_es_lt_costs"
+               },
+		 {
+                  "node":"Node174",
+                  "varSecondTree": "init_2_tors_adj_es_sg_costs"
+               },
+		 {
+                  "node":"Node175",
+                  "varSecondTree": "init_1_tors_adj_es_costs"
+               }
+               
+               
+    	]
+        
+}
+      
+

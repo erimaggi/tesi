@@ -8,9 +8,11 @@ package javaapplicationtree;
 import com.treeage.treeagepro.oi.AnalysisType;
 import com.treeage.treeagepro.oi.Distribution;
 import com.treeage.treeagepro.oi.Node;
+import com.treeage.treeagepro.oi.Report;
 import com.treeage.treeagepro.oi.Tree;
 import com.treeage.treeagepro.oi.TreeAgeProApplication;
 import com.treeage.treeagepro.oi.Variable;
+import com.treeage.treeagepro.oi.VariableDefinition;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -46,9 +48,8 @@ public class UseObjectInterface {
 
     
     public void openTree(String fileName) {
-        //apertura dell'ultimo albero aperto su treeAge
+        //apertura albero su treeAge
         try {
-            //tree = app.getTopTree();
             tree = app.getTree(fileName);
             if (tree.isValid()) {
                 System.out.println("The currently opened top tree is: " + tree.getTreeName());
@@ -61,17 +62,37 @@ public class UseObjectInterface {
         
     }
     
-    public void copyTree() {
+    public boolean isOpen(String fileName) {
+        boolean isOpen = true;
+        try {
+            //apertura albero su treeAge
+            tree = app.getTree(fileName);
+            if (tree.isValid()) {
+                System.out.println("The currently opened top tree is: " + tree.getTreeName());
+                
+            } else {
+                System.out.println("No one tree document is opened in TreeAge Pro.");
+                isOpen = false;
+            }
+            
+        } catch (RemoteException ex) {
+            Logger.getLogger(UseObjectInterface.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return isOpen;
+    }
+    
+    public void copyTree(String newName) {
         //salvataggio con un nuovo nome
         //String newName = "prometeo/home/cl416968/Desktop/proveTreeage/newTree1.trex";
-        String newName = "C:/Users/cl416968/treeage/workspace/newTree.trex";
+        
         try {
             tree.saveAs(newName);
-            //Tree tree = app.getTree("prova1Luglio2008.trex"); //non funziona
+            //System.out.println(tree.getFileName());
             if (tree.isValid()) {
                 System.out.println("The currently saved tree is: " + tree.getTreeName());
                 tree.close();
                 openTree(newName);
+                tree.save();
             } else {
                 System.out.println("No one tree document is saved in TreeAge Pro.");
             }
@@ -84,7 +105,6 @@ public class UseObjectInterface {
         //chiusura ultimo albero
         try {
             tree.close();
-            //Tree tree = app.getTree("prova1Luglio2008.trex"); //non funziona
             if (tree.isValid()) {
                 System.out.println("The currently closed tree is: " + tree.getTreeName());
             } else {
@@ -131,25 +151,25 @@ public class UseObjectInterface {
 
     }
     
-    public void updateVariable(String varToChange) {
+    public void updateVariable(String varToChange, String newValue) {
 
+        //in questo metodo viene passata la variabile dell'albero da modificare 
         com.treeage.treeagepro.oi.Variable myVar;
         com.treeage.treeagepro.oi.VariableDefinition myVarDef;
 
         try {
 
             System.out.println("--- Updating variable props and definition ---");
-
             myVar = tree.getVariable(varToChange);
+            if(myVar==null){
+                System.out.println("var null");
+            }
             System.out.println("Variable name current: " + myVar.getName());
             System.out.println("Variable desc current: " + myVar.getDescription());
-            myVar.setDescription("Costo del test");
-            System.out.println("Variable desc new:     " + myVar.getDescription());
 
-            tree.getRoot();
             myVarDef = myVar.getRootDefinition();
             System.out.println("Variable def at root current: " + myVarDef.getValue());
-            myVarDef.setValue("50");
+            myVarDef.setValue(newValue);
             System.out.println("Variable def at root new:     " + myVarDef.getValue());
             myVar.setRootDefinition(myVarDef);
 
@@ -183,110 +203,55 @@ public class UseObjectInterface {
         sampleTree.updateDistributions(dists);
 	}
     
-    /**
+        /**
      * Analyze the tree...
      * - Run roll back and output results for each strategy.
      * - Run simulation (PSA for CE tree, trials for simple tree.
      */
-    public void analyzeTree() throws RemoteException{
+    public String analyzeTree(int calcMet, int payoff) throws RemoteException {
 
-        com.treeage.treeagepro.oi.Node myNode;
+        com.treeage.treeagepro.oi.Node myNode, node1;
         com.treeage.treeagepro.oi.Node stratNode;
         Map<String, String> params;
         com.treeage.treeagepro.oi.Report report;
         com.treeage.treeagepro.oi.Report expVal;
         com.treeage.treeagepro.oi.Graph ceGraph;
         java.lang.String nodePath;
-
+        String vals = null;
         try {
 
             System.out.println("--- Running roll back and getting EV for each strategy ---");
 
             // Turn rollback on
+            tree.setCalculationMethod(calcMet, payoff, payoff);
             params = Collections.singletonMap("enable", "true");
             report = tree.runAnalysis(AnalysisType.rollback, params, null);
-            
+            System.out.println(report.getMessage());
+            System.out.println(tree.getCalculationMethod());            
             // Get expected values at the root node.
             myNode = tree.getRoot();
             expVal = myNode.expVal();
-            if (tree.getCalculationMethod().equals("ct_costEff")) {
-                System.out.println("Val at root node: ");
-                System.out.println("  Cost: " + expVal.getValue("cost"));
-                System.out.println("  Eff:  " + expVal.getValue("effectiveness"));
-            } else {
-                System.out.println("Val at root node: " + expVal.getValue("expectedValue"));
-            }
-
+            //stampo il valore atteso al nodo radice (strategia vincente)
+            System.out.println("Val at root node: " + expVal.getValue("expectedValue"));
             // Cycle through strategy nodes and collect expected values for each strategy
             for (int i = 1; i <= myNode.getBranchesNumber(); ++i) {
-
                 nodePath = "$" + i;
                 stratNode = myNode.getRelativeNode(nodePath);
                 expVal = stratNode.expVal();
-                if (tree.getCalculationMethod().equals("ct_costEff")) {
-                    System.out.println("Val at node '" + stratNode.getLabel() + "': ");
-                    System.out.println("  Cost: " + expVal.getValue("cost"));
-                    System.out.println("  Eff:  " + expVal.getValue("effectiveness"));
-                } else {
-                    System.out.println("Val at node '" + stratNode.getLabel() + "': " + expVal.getValue("expectedValue"));
-                }
-
+                System.out.println("Val at node '" + stratNode.getLabel() + "': " + expVal.getValue("expectedValue"));
+                vals = vals + "|" +expVal.getValue("expectedValue");
             }
 
             // Turn rollback off
             params = Collections.singletonMap("enable", "false");
             report = tree.runAnalysis(AnalysisType.rollback, params, null);
 
-            // Run cost-effectiveness analysis on CE tree
-            if (tree.getCalculationMethod().equals("ct_costEff")) {
-                System.out.println("--- Running Cost-Effectiveness analysis ---");
-                report = tree.runAnalysis(AnalysisType.costEffectivenes, null, myNode);
-                System.out.println("CE text report:");
-                //outputTextReport(report.getTextReport());
-                if (report.getGraph() != null) {
-                    System.out.println("Saving CEA graph image.");
-                    ceGraph = report.getGraph();
-                    String graphFile = app.getWorkspacePath() + "/Example Models/Healthcare/CE-graph.png";
-                    ceGraph.saveAsImage(graphFile);
-                    System.out.println("CEA graph image file is " + graphFile);
-                }
-            }
 
-            System.out.println("--- Running Monte Carlo simulation ---");
-
-            // Setup simulation parameters, several just use default
-            // Run PSA on this specific CE tree, trials on the sample tree
-            params = new HashMap<String, String>();
-            if (tree.getCalculationMethod().equals("ct_costEff")) {
-                params.put("samples", "100");
-                params.put("trials", "0");
-            } else {
-                params.put("samples", "0");
-                params.put("trials", "100");
-            }
-
-            report = tree.runAnalysis(AnalysisType.monteCarlo, params, myNode);
-
-            System.out.println("Simulation complete. Calc time: " + report.getCalcTime() + ", Status: " + report.getStatus());
-
-
-
-            // Getting secondary charts
-            if (!tree.getCalculationMethod().equals("ct_costEff")) {
-                // this particular example gets charts of CE analysis only
-                return;
-            }
-
-        System.out.println("Java OI example completed succesfully!");
-        } catch (RemoteException re) {
-            System.out.println("Error in analyzeTree.");
-            throw re;
         } catch (Exception e) {
             System.out.println("Error in analyzeTree. Regular exception, not RemoteException \n"
                     + e.getMessage());
-            return;
         }
-
+        return vals;
     }
     
     public ArrayList<Node> getAllBranches() throws RemoteException{
@@ -301,6 +266,60 @@ public class UseObjectInterface {
             System.out.println("branch "+i+" "+i_branch.getLabel()+" "+i_branch.getNameId()+" type"+i_branch.getType());
         }
         return branches;
+    }
+
+    public String getPayoffs() {
+        String payoffs = null;
+        try {
+            Variable myVar = tree.getVariable("payoffs"); 
+            VariableDefinition myVarDef = myVar.getRootDefinition();
+            payoffs = myVarDef.getValue().concat(";").concat(myVar.getComment());  
+        } catch (RemoteException ex) {
+            Logger.getLogger(UseObjectInterface.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return payoffs;
+    }
+    
+    public String getStrategies(){
+        String strat = null;
+        try {
+            Node myNode = tree.getRoot();
+            for (int i = 1; i <= myNode.getBranchesNumber(); ++i) {
+                String nodePath = "$" + i;
+                Node stratNode = myNode.getRelativeNode(nodePath);
+                strat = strat +"|" +stratNode.getLabel();
+            }
+        } catch (RemoteException ex) {
+                Logger.getLogger(UseObjectInterface.class.getName()).log(Level.SEVERE, null, ex);
+       }
+        return strat;
+    }
+    
+    public String selectNode(String nodeName){
+        com.treeage.treeagepro.oi.Node node1;
+        Map<String, String> params;
+        com.treeage.treeagepro.oi.Report report;
+        com.treeage.treeagepro.oi.Report expVal;
+        com.treeage.treeagepro.oi.Graph ceGraph;
+        java.lang.String nodePath;
+        String val = null;
+        try {
+            //metodo che dato il nodo di interesse stampa il valore atteso a quel nodo
+            // Turn rollback on
+//            params = Collections.singletonMap("enable", "true");
+//            report = tree.runAnalysis(AnalysisType.rollback, params, null);
+ 
+            //exp values al nodo scelto con l'id
+            System.out.println("\n");
+            node1 = tree.getNodeById(nodeName);
+            expVal = node1.expVal();
+            val = expVal.getValue("expectedValue").toString();
+            System.out.println("Val at root node: "+ node1.getLabel()+" " + expVal.getValue("expectedValue"));
+        } catch (RemoteException ex) {
+            Logger.getLogger(UseObjectInterface.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return val;
+        
     }
     
 }
