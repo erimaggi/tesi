@@ -1,0 +1,75 @@
+/* Shared style applied to all pages */
+/* trick to get desired scroll bar behavior on all browsers */ 
+html {
+	overflow:auto;
+	border:0px;
+	height:100%;
+	}
+
+	
+body {	
+	margin-left:0px;
+	margin-top:0px;
+	font-family:sans-serif;
+	font-size: 14px;
+	color:#000000;
+	background-image:url("./titlebanner.gif");
+	background-repeat: repeat-x;
+	} 
+	
+h1 {
+	text-align:left;
+	font-size: 15pt;
+	font-weight:normal;
+	color:#E5E5E5;
+	} 
+	
+h2 {
+	margin-top:25px;
+	margin-bottom:15px;
+	text-align:center;
+	font-size: 12pt;
+	font-weight:bold;
+	color:#000000;
+	} 
+
+td	{
+	padding-left: 2px;
+	}
+
+ul	 {
+	  margin-top:0px;
+      margin-left: 10px;
+      padding-left: 5px;
+      text-indent: 10px;
+    }
+	
+
+h4 {
+	color:#787878;
+	}	
+	
+a {
+    }
+
+a.contents {
+    display:block;
+    font-family:sans-serif;
+    font-size: 14px;
+    color:#000000;
+    font-weight:normal;
+    text-decoration:none;
+    padding-bottom:20px;
+    }
+
+.smallText {
+	font-size: 7px;
+	font-style: italic;
+	color:gray;
+	}
+		
+p {
+	padding-left:14px;
+	}
+	
+

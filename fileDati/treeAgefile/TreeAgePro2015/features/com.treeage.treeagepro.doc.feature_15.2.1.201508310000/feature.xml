@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.treeage.treeagepro.doc.feature"
+      label="TreeAge Pro Documentation Feature"
+      version="15.2.1.201508310000">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <requires>
+      <import plugin="org.eclipse.help.ui"/>
+      <import plugin="org.eclipse.help.webapp"/>
+      <import plugin="org.eclipse.equinox.http.jetty"/>
+      <import plugin="org.eclipse.ui.cheatsheets"/>
+   </requires>
+
+   <plugin
+         id="com.treeage.treeagepro.doc"
+         download-size="0"
+         install-size="0"
+         version="15.2.1.201508310000"
+         unpack="false"/>
+
+   <plugin
+         id="com.treeage.treeagepro.ui.cheatsheets"
+         download-size="0"
+         install-size="0"
+         version="15.2.1.201508310000"
+         unpack="false"/>
+
+</feature>

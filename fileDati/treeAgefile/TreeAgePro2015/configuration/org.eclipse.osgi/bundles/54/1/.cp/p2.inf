@@ -1,0 +1,16 @@
+instructions.configure=\
+  addRepository(type:0,name:TreeAge Pro Repository,location:http${#58}//files.treeagesoftware.com/updatesite/15-2/);\
+  addRepository(type:1,name:TreeAge Pro Repository,location:http${#58}//files.treeagesoftware.com/updatesite/15-2/);\
+  addRepository(type:0,name:TreeAge Pro Repository,location:http${#58}//files.treeagesoftware.com/updatesite/16-1/);\
+  addRepository(type:1,name:TreeAge Pro Repository,location:http${#58}//files.treeagesoftware.com/updatesite/16-1/);\
+  addRepository(type:0,name:TreeAge Pro Repository,location:http${#58}//files.treeagesoftware.com/updatesite/current/);\
+  addRepository(type:1,name:TreeAge Pro Repository,location:http${#58}//files.treeagesoftware.com/updatesite/current/);\
+  setProgramProperty(propName:org.eclipse.update.reconcile,propValue:false);
+instructions.unconfigure=\
+  removeRepository(type:0,location:http${#58}//files.treeagesoftware.com/updatesite/15-2/);\
+  removeRepository(type:1,location:http${#58}//files.treeagesoftware.com/updatesite/15-2/);\
+  removeRepository(type:0,location:http${#58}//files.treeagesoftware.com/updatesite/16-1/);\
+  removeRepository(type:1,location:http${#58}//files.treeagesoftware.com/updatesite/16-1/);\
+  removeRepository(type:0,location:http${#58}//files.treeagesoftware.com/updatesite/current/);\
+  removeRepository(type:1,location:http${#58}//files.treeagesoftware.com/updatesite/current/);\
+  setProgramProperty(propName:org.eclipse.update.reconcile,propValue:);

@@ -145,31 +145,41 @@ public class CalculationFrame extends JFrame {
 //    }
     
     private void catchVars(int index){
-        if(!oInt.isOpen(newName)){
-            oInt.openTree(newName);
+        try {
+            if(!oInt.isOpen(newName)){
+                oInt.openTree(newName);
+            }
+            oInt.getTree().setCalculationMethod(SIMPLE_ROLLBACK_INT, index, index);
+            for (int i=0; i<js.readNode("payoff"+Integer.toString(index)).size(); i++){
+                expVal = oInt.selectNode(js.readNode("payoff"+Integer.toString(index)).get(i));
+                varName = js.readVars("payoff"+Integer.toString(index)).get(i);
+                System.out.println(varName+" = "+expVal);
+                //mappa che contiene i valori degli initial da mettere nel secondo albero
+                mapp.put(varName, expVal);
+//            varName = null;
+//            expVal = null;
+System.out.println("-");
+//System.out.println(mapp.toString());
+            }
+            oInt.closeTree();
+        } catch (RemoteException ex) {
+            Logger.getLogger(CalculationFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
-        for (int i=0; i<js.readNode("payoff"+Integer.toString(index)).size(); i++){
-            expVal = oInt.selectNode(js.readNode("payoff"+Integer.toString(index)).get(i));
-            varName = js.readVars("payoff"+Integer.toString(index)).get(i);
-            System.out.println(varName+" = "+expVal);
-            //mappa che contiene i valori degli initial da mettere nel secondo albero
-            mapp.put(varName, expVal);
-            varName = null;
-            expVal = null;
-            System.out.println("-");
-            //System.out.println(mapp.toString());
-        }   
-        oInt.closeTree();
     }
     
     private void putVars(){
-        oInt.openTree(path+js.getTree("secondTree")); 
-        oInt.copyTree(newName2);
-        Set<String> keys = mapp.keySet();
-        for(String key: keys){
-            System.out.println("*****************sostituzione var secondo albero*************");
-            oInt.updateVariable(key, mapp.get(key));
-        }  
+        try {
+            oInt.openTree(path+js.getTree("secondTree"));
+            oInt.copyTree(newName2);
+            Set<String> keys = mapp.keySet();
+            for(String key: keys){
+                System.out.println("*****************sostituzione var secondo albero*************");
+                oInt.updateVariable(key, mapp.get(key));
+            }
+            oInt.getTree().save();
+        } catch (RemoteException ex) {
+            Logger.getLogger(CalculationFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
    

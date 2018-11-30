@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.treeage.treeagepro.spreadsheet.feature"
+      label="TreeAge Pro Dynamic Links and Spreadsheet Support Feature"
+      version="15.2.1.201508310000">
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.swt"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="com.treeage.model.tree"/>
+      <import plugin="com.treeage.treeagepro.api"/>
+      <import plugin="com.treeage.treeagepro.core.ui"/>
+      <import plugin="com.treeage.treeagepro.license"/>
+      <import plugin="com.treeage.treeagepro.ui"/>
+      <import plugin="org.eclipse.emf.ecore.edit"/>
+   </requires>
+
+   <plugin
+         id="com.treeage.treeagepro.dlink.excel"
+         os="win32"
+         download-size="0"
+         install-size="0"
+         version="15.2.1.201508310000"
+         unpack="false"/>
+
+   <plugin
+         id="com.treeage.treeagepro.dlink.ooffice"
+         download-size="0"
+         install-size="0"
+         version="15.2.1.201508310000"
+         unpack="false"/>
+
+   <plugin
+         id="com.treeage.treeagepro.excel.win32"
+         os="win32"
+         download-size="0"
+         install-size="0"
+         version="15.2.1.201508310000"/>
+
+   <plugin
+         id="com.treeage.treeagepro.excel.macosx"
+         os="macosx"
+         download-size="0"
+         install-size="0"
+         version="15.2.1.201508310000"
+         unpack="false"/>
+
+   <plugin
+         id="com.treeage.treeagepro.excel.ui.win32"
+         download-size="0"
+         install-size="0"
+         version="15.2.1.201508310000"
+         unpack="false"/>
+
+   <plugin
+         id="com.treeage.treeagepro.excel.win32.x86"
+         os="win32"
+         arch="x86"
+         download-size="0"
+         install-size="0"
+         version="15.2.1.201508310000"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="com.treeage.treeagepro.excel.win32.x86_64"
+         os="win32"
+         arch="x86_64"
+         download-size="0"
+         install-size="0"
+         version="15.2.1.201508310000"
+         fragment="true"
+         unpack="false"/>
+
+</feature>

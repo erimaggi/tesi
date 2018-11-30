@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.treeage.treeagepro.extension.feature"
+      label="TreeAge Pro Extensions Feature"
+      version="15.2.1.201508310000">
+
+   <description url="http://www.example.com/description">
+      This feature includes sample plugins that extends TreeAge Pro functionality and use TreeAge Pro extension API.
+   </description>
+
+   <requires>
+      <import plugin="com.treeage.treeagepro.api"/>
+      <import plugin="org.eclipse.jface"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.osgi"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.ui.workbench"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="com.treeage.model.tree"/>
+      <import plugin="com.treeage.treeagepro.core.ui"/>
+      <import plugin="org.eclipse.gmf.runtime.emf.core"/>
+      <import plugin="org.eclipse.emf.codegen.ecore"/>
+      <import plugin="org.eclipse.jdt.core"/>
+      <import plugin="com.treeage.treeagepro.analysis"/>
+      <import plugin="org.eclipse.gmf.runtime.notation"/>
+      <import plugin="com.treeage.treeagepro.tp200x.support"/>
+      <import plugin="org.eclipse.gmf.runtime.diagram.core"/>
+      <import plugin="org.eclipse.gmf.runtime.diagram.ui"/>
+      <import plugin="org.eclipse.gmf.runtime.diagram.ui.resources.editor"/>
+      <import plugin="org.eclipse.emf.common"/>
+      <import plugin="com.treeage.treeagepro.ui"/>
+      <import plugin="com.treeage.treeagepro.tables.sql"/>
+      <import plugin="org.eclipse.gmf.runtime.emf.commands.core"/>
+      <import plugin="com.treeage.treeagepro.ui.report"/>
+   </requires>
+
+   <plugin
+         id="com.treeage.treeagepro.ext.customfile"
+         download-size="0"
+         install-size="0"
+         version="15.2.1.201508310000"
+         unpack="false"/>
+
+   <plugin
+         id="com.treeage.model.tree.transform.xls"
+         download-size="0"
+         install-size="0"
+         version="15.2.1.201508310000"
+         unpack="false"/>
+
+   <plugin
+         id="com.treeage.treeagepro.tables.sql"
+         download-size="0"
+         install-size="0"
+         version="15.2.1.201508310000"
+         unpack="false"/>
+
+   <plugin
+         id="com.treeage.treeagepro.tables.sql.ui"
+         download-size="0"
+         install-size="0"
+         version="15.2.1.201508310000"
+         unpack="false"/>
+
+   <plugin
+         id="com.treeage.treeagepro.importer.dm"
+         download-size="0"
+         install-size="0"
+         version="15.2.1.201508310000"
+         unpack="false"/>
+
+</feature>

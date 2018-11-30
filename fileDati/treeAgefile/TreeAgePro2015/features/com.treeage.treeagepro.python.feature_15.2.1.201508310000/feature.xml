@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.treeage.treeagepro.python.feature"
+      label="TreeAge Pro Python Support Feature"
+      version="15.2.1.201508310000">
+
+   <requires>
+      <import plugin="com.treeage.treeagepro.api"/>
+      <import plugin="com.treeage.model.tree"/>
+      <import plugin="org.eclipse.emf.transaction"/>
+      <import plugin="org.eclipse.emf.ecore.edit"/>
+   </requires>
+
+   <plugin
+         id="org.python"
+         download-size="0"
+         install-size="0"
+         version="2.5.1"
+         unpack="false"/>
+
+   <plugin
+         id="com.treeage.treeagepro.parser.python"
+         download-size="0"
+         install-size="0"
+         version="15.2.1.201508310000"
+         unpack="false"/>
+
+</feature>

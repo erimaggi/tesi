@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config date="1542211323192" transient="false" version="3.0">
+<site enabled="true" policy="USER-EXCLUDE" updateable="true" url="platform:/base/">
+<feature id="com.treeage.treeagepro.ui.feature" url="features/com.treeage.treeagepro.ui.feature_15.2.1.201508310000/" version="15.2.1.201508310000">
+</feature>
+<feature id="com.treeage.treeagepro.python.feature" url="features/com.treeage.treeagepro.python.feature_15.2.1.201508310000/" version="15.2.1.201508310000">
+</feature>
+<feature id="org.eclipse.equinox.p2.core.feature" url="features/org.eclipse.equinox.p2.core.feature_1.1.0.v20121211-153934-8297FndFWmE7h7Bpz-vcqkxyKz0/" version="1.1.0.v20121211-153934-8297FndFWmE7h7Bpz-vcqkxyKz0">
+</feature>
+<feature id="com.treeage.treeagepro.doc.feature" url="features/com.treeage.treeagepro.doc.feature_15.2.1.201508310000/" version="15.2.1.201508310000">
+</feature>
+<feature id="com.treeage.treeagepro.spreadsheet.feature" url="features/com.treeage.treeagepro.spreadsheet.feature_15.2.1.201508310000/" version="15.2.1.201508310000">
+</feature>
+<feature id="org.eclipse.rcp" url="features/org.eclipse.rcp_3.8.2.v20130118-180157-96BuGOZFxwOAeG8Ofmqicz0tPK/" version="3.8.2.v20130118-180157-96BuGOZFxwOAeG8Ofmqicz0tPK">
+</feature>
+<feature id="com.treeage.treeagepro.report.feature" url="features/com.treeage.treeagepro.report.feature_15.2.1.201508310000/" version="15.2.1.201508310000">
+</feature>
+<feature id="com.treeage.treeagepro.tutorials.feature" url="features/com.treeage.treeagepro.tutorials.feature_15.2.1.201508310000/" version="15.2.1.201508310000">
+</feature>
+<feature id="com.treeage.treeagepro.extension.feature" url="features/com.treeage.treeagepro.extension.feature_15.2.1.201508310000/" version="15.2.1.201508310000">
+</feature>
+</site>
+</config>

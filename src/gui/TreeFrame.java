@@ -82,6 +82,7 @@ public class TreeFrame extends JFrame  implements ActionListener{
             if(findJson() != null){
                 label3.setText("File json "+findJson()+ " caricato correttamente");                        
                 CalculationFrame calc=new CalculationFrame(findJson());
+                //CalculationFrame calc=new CalculationFrame("treeProva1.json");
                 calc.setVisible(true);
                 calc.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 this.dispose();

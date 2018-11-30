@@ -1,0 +1,67 @@
+{
+         "firstTree":"provaSenzaData.trex",
+         "secondTree":"Untitled1.trex",
+            "payoff1":[
+               {
+                  "node":"Node1",
+                  "varSecondTree": "init1"
+               },
+               {
+                  "node": "Node3",
+          	  "varSecondTree": "init3"
+               },
+               {
+                  "node": "Node8",
+          	  "varSecondTree": "init8"
+               },
+               {
+                  "node": "Node17",
+          	  "varSecondTree": "init17"
+               },
+               {
+                  "node": "Node18",
+          	  "varSecondTree": "init18"
+               },
+               {
+                  "node": "Node33",
+         	  "varSecondTree": "init33"
+               },
+	       {
+                  "node": "Node34",
+         	  "varSecondTree": "init34"
+               }
+            ],
+            "payoff2":[
+	       {
+                  "node":"Node1",
+                  "varSecondTree": "init1_qaly"
+               },
+               {
+                  "node":"Node2",
+                  "varSecondTree": ""
+               },
+               {
+                  "node": "Node3",
+          	  "varSecondTree": ""
+               },
+               {
+                  "node": "Node4",
+          	  "varSecondTree": ""
+               },
+               {
+                  "node": "Node5",
+          	  "varSecondTree": ""
+               },
+               {
+                  "node": "Node34",
+          	  "varSecondTree": ""
+               },
+               {
+                  "node": "Node36",
+         	  "varSecondTree": ""
+               }
+               
+            ]
+      }
+      
+

@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Export-Package: org.codehaus.jackson,org.codehaus.jackson.annotate,org
+ .codehaus.jackson.format,org.codehaus.jackson.impl,org.codehaus.jacks
+ on.io,org.codehaus.jackson.map,org.codehaus.jackson.map.annotate,org.
+ codehaus.jackson.map.deser,org.codehaus.jackson.map.deser.impl,org.co
+ dehaus.jackson.map.deser.std,org.codehaus.jackson.map.exc,org.codehau
+ s.jackson.map.ext,org.codehaus.jackson.map.introspect,org.codehaus.ja
+ ckson.map.jsontype,org.codehaus.jackson.map.jsontype.impl,org.codehau
+ s.jackson.map.module,org.codehaus.jackson.map.ser,org.codehaus.jackso
+ n.map.ser.impl,org.codehaus.jackson.map.ser.std,org.codehaus.jackson.
+ map.type,org.codehaus.jackson.map.util,org.codehaus.jackson.node,org.
+ codehaus.jackson.schema,org.codehaus.jackson.sym,org.codehaus.jackson
+ .type,org.codehaus.jackson.util
+Bundle-ClassPath: jackson-core-asl-1.9.8.jar,jackson-mapper-asl-1.9.8.
+ jar
+Bundle-Version: 1.9.8
+Bundle-Name: Jackson JSON Processor
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.codehaus.jackson
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+
+Name: jackson-mapper-asl-1.9.8.jar
+SHA1-Digest: 00Q3KK07Ad2Ug4pueZZLHH6onJ0=
+
+Name: jackson-core-asl-1.9.8.jar
+SHA1-Digest: 4E6LLe/L8uNlt1SYo2R18s3cRLo=
+

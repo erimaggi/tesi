@@ -1,0 +1,9 @@
+#Equinox secure storage version 1.0
+#Tue Nov 13 11:45:31 CET 2018
+org.eclipse.equinox.security.preferences.version=1
+org.eclipse.equinox.security.preferences.cipher=PBEWithMD5AndDES
+serial=org.eclipse.equinox.security.noModule\toCCRf9wWh4Y\=,usQS9HttAPJ5OcbPufMv+14UJmiZpsPr
+key=org.eclipse.equinox.security.noModule\tvkKlhsb+gS0\=,2UY4TK329fwsbxGPgyhF6ag853DGQD7TsZoeSHXxNU+KeOYuOBSNkvPIR0/Agii6
+key2=org.eclipse.equinox.security.noModule\tEJwz0cagunk\=,omSoFja1Tu2OF+vxS2FDFvvXmP13HQYf
+org.eclipse.equinox.security.preferences.keyFactory=PBEWithMD5AndDES
+trialExp=org.eclipse.equinox.security.noModule\tx81McudwAjA\=,BVHc5etngDE\=

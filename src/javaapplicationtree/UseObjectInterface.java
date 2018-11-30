@@ -162,6 +162,7 @@ public class UseObjectInterface {
             System.out.println("--- Updating variable props and definition ---");
             myVar = tree.getVariable(varToChange);
             if(myVar==null){
+                System.out.println(varToChange);
                 System.out.println("var null");
             }
             System.out.println("Variable name current: " + myVar.getName());
@@ -321,5 +322,11 @@ public class UseObjectInterface {
         return val;
         
     }
+
+    public Tree getTree() {
+        return tree;
+    }
+    
+    
     
 }
